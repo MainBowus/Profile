@@ -13,9 +13,9 @@
     <nav class="navbar" data-aos="fade-down">
         <div class="logo"><span style="font-weight:900;"></span> MainBowUs</div>
         <div class="nav-links">
-            <a href="#">ABOUT</a>
-            <a href="#">WHAT I DO</a>
-            <a href="#">WORK</a>
+            <a href="#about">ABOUT</a>
+            <a href="#whatido">WHAT I DO</a>
+            <a href="#port">WORK</a>
             <a href="#">CONTACT</a>
         </div>
     </nav>
@@ -27,9 +27,15 @@
             </h1>
             <p>Front-End Development – Machine Learning </p>
             <div class="socials">
-                <a href="#" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-instagram"></i></a>
-                <a href="#" data-aos="zoom-in" data-aos-delay="400"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" data-aos="zoom-in" data-aos-delay="600"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/mainbowus/" data-aos="zoom-in" data-aos-delay="200" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width:32px;height:32px;filter:invert(1);">
+                </a>
+                <a href="https://www.facebook.com/amontep.jeramanapong/" data-aos="zoom-in" data-aos-delay="400" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width:32px;height:32px;filter:invert(1);">
+                </a>
+                <a href="https://github.com/MainBowus" data-aos="zoom-in" data-aos-delay="600" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" style="width:32px;height:32px;filter:invert(1);">
+                </a>
             </div>
         </div>
     </section>
@@ -39,7 +45,7 @@
                 <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="about me">
             </div>
             <div class="about-text" data-aos="fade-left" data-aos-delay="400">
-                <div class="about-title">ABOUT ME</div>
+                <div class="about-title" id="about">ABOUT ME</div>
                 <h2>I’m Amontep👋</h2>
                 <p>
                     I'm a first-year Software Engineering student who loves Front-End Development and exploring Machine Learning.
@@ -52,7 +58,7 @@
     </section>
     <section class="whatido-section">
         <div class="whatido-container">
-            <div class="whatido-title" data-aos="fade-up">WHAT I DO</div>
+            <div class="whatido-title" data-aos="fade-up" id="whatido">WHAT I DO</div>
             <h2 class="whatido-heading" data-aos="fade-up" data-aos-delay="100">SPECIALIZING IN</h2>
             <div class="whatido-cards">
                 <div class="whatido-card" data-aos="zoom-in-up" data-aos-delay="200">
@@ -80,7 +86,7 @@
     </section>
     <section class="portfolio-section">
         <div class="portfolio-container">
-            <div class="portfolio-title" data-aos="fade-up">PORTFOLIO</div>
+            <div class="portfolio-title" data-aos="fade-up" id ="port">PORTFOLIO</div>
             <h2 class="portfolio-heading" data-aos="fade-up" data-aos-delay="100">LATEST PROJECTS</h2>
             <div class="portfolio-cards">
                 <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200" data-aos-anchor-placement="top-bottom">
@@ -99,7 +105,9 @@
     </section>
     <section class="contact-section" data-aos="zoom-in" data-aos-delay="200">
         <div class="contact-container">
-            <h3>Have any project in mind ?</h3>
+            <h3>
+                <span id="typed-contact"></span>
+            </h3>
             <a href="#" class="contact-btn">Contact me</a>
         </div>
     </section>
@@ -118,7 +126,6 @@
         offset: 60
     });
 
-    // Typed.js effect for your name
     document.addEventListener('DOMContentLoaded', function () {
         new Typed('#typed-name', {
             strings: [
@@ -130,6 +137,21 @@
             backSpeed: 40,
             backDelay: 1800,
             startDelay: 500,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
+        });
+
+        new Typed('#typed-contact', {
+            strings: [
+                "Have any project in mind ?",
+                "อยากทำเว็บหรือแอปมั้ย ?",
+                "Let's build something cool together!"
+            ],
+            typeSpeed: 40,
+            backSpeed: 30,
+            backDelay: 1800,
+            startDelay: 300,
             loop: true,
             showCursor: true,
             cursorChar: '|'
