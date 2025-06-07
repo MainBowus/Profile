@@ -22,7 +22,9 @@
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
-            <h1>I’m Amontep </h1>
+             <h1>
+                <span id="typed-name"></span>
+            </h1>
             <p>Front-End Development – Machine Learning </p>
             <div class="socials">
                 <a href="#" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-instagram"></i></a>
@@ -38,12 +40,12 @@
             </div>
             <div class="about-text" data-aos="fade-left" data-aos-delay="400">
                 <div class="about-title">ABOUT ME</div>
-                <h2>I’m Amontep</h2>
+                <h2>I’m Amontep👋</h2>
                 <p>
-                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                    I'm a first-year Software Engineering student who loves Front-End Development and exploring Machine Learning.
                 </p>
                 <p>
-                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                    I enjoy turning ideas into clean, interactive user interfaces, and I'm always learning new tech to improve my skills.
                 </p>
             </div>
         </div>
@@ -59,16 +61,18 @@
                     </div>
                     <div class="whatido-card-title">Front-end<br>Development</div>
                     <div class="whatido-card-desc">
-                        Lom ipsum dolo, sit amet consectetur adipisicing elit, rem voluptas sed blanditiis
+                        Front-end Development is about building the interface and user experience of websites or apps—like buttons, forms, and animations.
+                        Beyond HTML, CSS, and JS, tools like React, Vue, Svelte, Tailwind, and Next.js make development faster and more modern.
                     </div>
                 </div>
                 <div class="whatido-card" data-aos="zoom-in-up" data-aos-delay="400">
                     <div class="whatido-icon">
-                        <img src="https://img.icons8.com/color/48/000000/design.png" alt="UI/UX">
+                        <img src="https://img.icons8.com/?size=100&id=114322&format=png&color=000000" alt="Machine Learning">
                     </div>
-                    <div class="whatido-card-title">UI/UX<br>Designer</div>
+                    <div class="whatido-card-title">Machine<br>Learning</div>
                     <div class="whatido-card-desc">
-                        Lom ipsum dolo, sit amet consectetur adipisicing elit, rem voluptas sed blanditiis
+                        Machine Learning lets computers learn from data to make decisions, like separating spam from normal emails.
+                        The more data it has, the better it learns and performs.
                     </div>
                 </div>
             </div>
@@ -81,19 +85,15 @@
             <div class="portfolio-cards">
                 <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200" data-aos-anchor-placement="top-bottom">
                     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Nature Gallery">
-                    <div class="portfolio-card-title">Nature Gallery</div>
-                    <a href="#" class="portfolio-btn">View Demo</a>
+                    <div class="portfolio-card-title">SynerLearn</div>
+                    <a href="https://synerlearn.vercel.app" class="portfolio-btn">View</a>
                 </div>
                 <div class="portfolio-card" data-aos="fade-up" data-aos-delay="400" data-aos-anchor-placement="top-bottom">
                     <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Urban Explorer">
-                    <div class="portfolio-card-title">Urban Explorer</div>
-                    <a href="#" class="portfolio-btn">View Demo</a>
+                    <div class="portfolio-card-title">Portfolio Website</div>
+                    <a href="https://myprofile-teal-five.vercel.app" class="portfolio-btn">View</a>
                 </div>
-                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="600" data-aos-anchor-placement="top-bottom">
-                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Creative Workspace">
-                    <div class="portfolio-card-title">Creative Workspace</div>
-                    <a href="#" class="portfolio-btn">View Demo</a>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -105,17 +105,36 @@
     </section>
     <footer class="footer" data-aos="fade-up" data-aos-delay="100">
         <div class="footer-content">
-            <div class="footer-logo">LOGO</div>
-            <div class="footer-copy">COPYRIGHT © 2018 CV MainBowUs.</div>
+            <div class="footer-logo">MainBowUs</div>
+            <div class="footer-copy">COPYRIGHT © 2025 CV MainBowUs.</div>
         </div>
     </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 900,
-            once: false,
-            offset: 60
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    AOS.init({
+        duration: 900,
+        once: false,
+        offset: 60
+    });
+
+    // Typed.js effect for your name
+    document.addEventListener('DOMContentLoaded', function () {
+        new Typed('#typed-name', {
+            strings: [
+                "<span style='color:#ffffff ;'>I’m Amontep Jeramanapong👋</span>",
+                "<span style='color:#ff4b2b;'>I Like Burgers🍔</span>",
+                "<span style='color:#FFD600;'>And I Love Cats🐈</span>"
+            ],
+            typeSpeed: 40,
+            backSpeed: 40,
+            backDelay: 1800,
+            startDelay: 500,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
         });
-    </script>
+    });
+</script>
 </body>
 </html>
