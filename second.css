@@ -1,0 +1,118 @@
+
+/* ...existing code... */
+.floating-socials {
+    position: fixed;
+    right: 28px;
+    bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.floating-socials.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.floating-socials a img {
+    width: 38px;
+    height: 38px;
+    background: #222;
+    border-radius: 50%;
+    padding: 7px;
+    transition: background 0.2s, transform 0.18s;
+    filter: invert(1);
+}
+.floating-socials a img:hover {
+    background: #6c64ff !important;
+    transform: scale(1.12);
+}
+@media (max-width: 600px) {
+    .floating-socials {
+        right: 12px;
+        bottom: 16px;
+        gap: 12px;
+    }
+    .floating-socials a img {
+        width: 32px;
+        height: 32px;
+        padding: 5px;
+    }
+}
+/* เพิ่มใน style.css */
+.floating-socials {
+    position: fixed;
+    right: 28px;
+    bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    z-index: 99;
+}
+
+.floating-socials a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.floating-socials a img {
+    width: 38px;
+    height: 38px;
+    background: #222;
+    border-radius: 50%;
+    padding: 7px;
+    filter: invert(1);
+    transition: background 0.2s, transform 0.18s;
+}
+
+.floating-socials a img:hover {
+    background: #6c63ff;
+    transform: scale(1.12);
+}
+
+.floating-socials .social-label {
+    opacity: 0;
+    visibility: hidden;
+    background: #232323;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 6px 6px;
+    margin-right: 12px;
+    white-space: nowrap;
+    position: absolute;
+    right: 120%;
+    top: 50%;
+    transform: translateY(-50%) translateX(10px);
+    transition: opacity 0.18s, visibility 0.18s, transform 0.18s;
+    pointer-events: none;
+    box-shadow: 0 2px 12px #0002;
+}
+
+.floating-socials a:hover .social-label {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 600px) {
+    .floating-socials {
+        right: 12px;
+        bottom: 16px;
+        gap: 12px;
+    }
+    .floating-socials a img {
+        width: 32px;
+        height: 32px;
+        padding: 5px;
+    }
+    .floating-socials .social-label {
+        font-size: 0.95rem;
+        padding: 5px 10px;
+    }
+}
