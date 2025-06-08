@@ -29,18 +29,6 @@
     background: #6c64ff !important;
     transform: scale(1.12);
 }
-@media (max-width: 600px) {
-    .floating-socials {
-        right: 12px;
-        bottom: 16px;
-        gap: 12px;
-    }
-    .floating-socials a img {
-        width: 32px;
-        height: 32px;
-        padding: 5px;
-    }
-}
 /* เพิ่มใน style.css */
 .floating-socials {
     position: fixed;
@@ -100,19 +88,3 @@
     transform: translateY(-50%) translateX(0);
 }
 
-@media (max-width: 600px) {
-    .floating-socials {
-        right: 12px;
-        bottom: 16px;
-        gap: 12px;
-    }
-    .floating-socials a img {
-        width: 32px;
-        height: 32px;
-        padding: 5px;
-    }
-    .floating-socials .social-label {
-        font-size: 0.95rem;
-        padding: 5px 10px;
-    }
-}
